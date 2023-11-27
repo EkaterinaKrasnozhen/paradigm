@@ -1,7 +1,7 @@
 # Простой коэффициент корреляции (Пирсона) вычисляется по формуле: r = n ∑ i = 1 (x n − ¯ x) (y n − ¯ y) n σ x σ y, 
 # где n — число статистических наблюдений, x и y — случайные переменные. 
 
-def correlation(data1, data2):
+def correlation(data1, data2) -> float:
     MEAN1 = sum(data1) / len(data1) # вычислим среднее значение data1
     MEAN2 = sum(data2) / len(data2) # вычислим среднее значение data2
     x_mean = list(map(lambda x: x - MEAN1, data1))# записываем разницу между каждым из отдельных значений data1 и его средним значением в список
